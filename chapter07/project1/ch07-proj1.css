@@ -13,6 +13,9 @@ body {
     background-color: var(--color-back-light);
 }
 header {
+   display:flex; 
+   justify-content: space-between;
+   align-items: center;
    padding: 0 var(--spacer-base);
    background-color: var(--color-back-dark);
    height: var(--header-height);
@@ -39,11 +42,31 @@ button {
     border-radius: 0.25rem;
     cursor: pointer;
 }
+.container{
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+.cards{
+    display: flex;
+    justify-content: space-between ;
+}
 .card {
-	background: white;
+	background: rgb(255, 255, 255);
 	margin-bottom: 2em;	
     padding: 0;
-   
+    width: 24%;
+}
+.card:hover{
+    box-shadow: 6px 5px 20px 1px rgba(0,0,0,0.22);
+}
+.card img {
+    max-width: 100%;
+}
+.card img:hover {
+    filter: saturate(150%);
+    
 }
 .card-content p {
 	padding: 0.5em 1.4em 0 1.4em;
@@ -51,8 +74,14 @@ button {
 }
 .card-actions {
 	padding: 0.5em 1.4em;
-	font-size: var(--card-font-size);      
+	font-size: var(--card-font-size);
+    opacity: 0;      
 }
+.card:hover .card-actions {
+    opacity: 1;
+    transition-duration: 1s;     
+}
+
 
 
 
@@ -62,6 +91,16 @@ button {
 
 
 /* styles for mobile protrait screen */
+@media only screen and (max-width:480px) 
+{ 
+ .card { width: 100%; }
+ header {font-size: 24px; height: 4em;}
 
+}
 
 /* styles for tablet portrait and mobile landscape screens */
+@media only screen and (min-width:481px) and (max-width:768px)
+{ 
+.card { width: 45%; }
+
+}

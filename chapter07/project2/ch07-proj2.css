@@ -44,9 +44,74 @@ h2, h3, h4 {
 	 box-shadow: 2px 2px 2px 2px hsla(0,0%,75%,0.2);
  }
 
+ 
  /* add your styles */
+ .container {
+	display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 25px;
+    grid-template-rows: 175px 75px 175px 275px;
+    grid-template-areas: "a a b b c c d d e f"
+                        "g g h h h h i j k k"
+                        "g g h h h h l l m m"
+                        "n n o o p p q q q q"; 
+ }
 
-}
+    #a { grid-area: a;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    img {
+        max-width: 100%;
+    }
+    caption{
+        background-color: white;
+        background-size: 100%;
+    }
+    #b { grid-area: b;
+        background-image:url(images/b.jpg) }
+    #c { grid-area: c;
+        background-image:url(images/c.jpg)  }
+    #d { grid-area: d; 
+        background-color: #4C63B6; 
+        display: flex;
+    justify-content: center;}
+    #e { grid-area: e; 
+        background-image:url(images/e.jpg)  }
+    #f { grid-area: f; 
+        background-image:url(images/f.jpg)}
+    #g { grid-area: g; }
+    #h { grid-area: h; 
+        background-image:url(images/h.jpg)}
+    #i { grid-area: i; 
+        background-color: #4a5b97;
+        display: flex;
+        justify-content: center; }
+    #j { grid-area: j;
+        background-color: #4C63B6;
+        display: flex;
+        justify-content: center; }
+    #k { grid-area: k;
+        background-color: #4C63B6;
+        display: flex;
+        justify-content: center;   }
+    #l { grid-area: l; 
+        background-image:url(images/l.jpg)}
+    #m { grid-area: m; 
+        background-image:url(images/m.jpg)}
+    #n { grid-area: n; }
+    #o { grid-area: o;
+        background-image:url(images/o.jpg) }
+    #p { grid-area: p;
+        background-image:url(images/p.jpg)  }
+    #q { grid-area: q;
+        background-image:url(images/q.jpg) }
+    .btn{
+        max-height:max-content;
+    }
+
+
 
 /* styles for mobile protrait screen */
 
